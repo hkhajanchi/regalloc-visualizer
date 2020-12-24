@@ -3,7 +3,7 @@ LLVM_VERSION=10.0.0
 all: install-llvm profiler_patch ninja-setup build 
 
 install-llvm: 
-	git clone https://github.com/scampanoni/LLVM_installer.git $(LLVM_VERSION)
+	git clone https://github.com/hkhajanchi/LLVM_installer.git $(LLVM_VERSION)
 	cd $(LLVM_VERSION); make src BACKENDS="X86" EXTRAS="noextra" TESTS="notest"
 
 profiler_patch: 
@@ -15,3 +15,6 @@ ninja-setup:
 
 build:
 	cd $(LLVM_VERSION) && ninja llc
+
+clean: 
+	rm -rf 10.0.0/; rm -rf profiler_patch
