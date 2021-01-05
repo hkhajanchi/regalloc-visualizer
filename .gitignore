@@ -1,0 +1,9 @@
+*.ll
+*.s 
+*.bc
+10.0.0/
+python/.vscode/
+profiler_patch
+regalloc_dump.txt
+regalloc_dump_bw.txt
+out.txt
